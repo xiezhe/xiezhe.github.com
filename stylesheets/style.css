@@ -1,0 +1,11 @@
+div{width:200px;
+	height:200px;
+	margin:200px;
+	background: #f00;
+	-webkit-transition:all 0.8s ease-in-out;
+	-ms-transition:all 0.8s ease-in-out;
+	-moz-transition:all 0.8s ease-in-out;
+	-o-transition:all 0.8s ease-in-out;
+	transition:all 0.8s ease-in-out;}
+.one:hover{transform: translateX(100px) scale(1.5) rotate(360deg);}
+.two:hover{transform:rotate(360deg) translateX(100px) scale(0.7);};
