@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.cube{
+			margin:1.5em auto;
+			width:2em;
+			height:2em;
+			transform-style:preserve-3d;
+			perspective:400px;
+			perspective-origin:center;
+		}
+		.pos{
+			/* font-size: 1em;
+						 */			
+			position: absolute;
+			width:5em;
+			height:5em;
+			line-height: 5em;
+			text-align: center;
+			background:rgba(255,0,0,.5);
+			border:1px solid #0ff;
+			font-size: 3em
+		}
+		.font{
+			transform:translateZ(2.5em);
+		}
+		.top{transform:rotateX(90deg) translateZ(2.5em);}
+		.back{transform:rotateY(180deg) translateZ(2.5em);}
+		.bottom{transform:rotateX(-90deg) translateZ(2.5em);}
+		.left{transform:rotateY(-90deg) translateZ(2.5em);}
+		.right{transform:rotateY(90deg) translateZ(2.5em);}
+		/*translateZ和宽高是二分之一的关系*/
+	</style>
+	
+</head>
+<body>
+	<div class="cube">
+		<div class="pos top">1</div>
+		<div class="pos font">2</div>
+		<div class="pos bottom">3</div>
+		<div class="pos left">4</div>
+		<div class="pos right">5</div>
+		<div class="pos back">6</div>
+	</div>
+</body>
+</html>
