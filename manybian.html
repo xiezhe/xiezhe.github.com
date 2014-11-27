@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>manybian</title>
+	<style type="text/css">
+		@-webkit-keyframes spin{
+			0%{-webkit-transform:rotateY(0deg);transform:rotateY(0deg)}
+			100%{-webkit-transform:rotateY(360deg);transform:rotateY(360deg)}
+		}
+		@-moz-keyframes spin{
+			0%{-moz-transform:rotateY(0deg);transform:rotateY(0deg)}
+			100%{-moz-transform:rotateY(360deg);transform:rotateY(360deg)}
+		}
+		@-ms-keyframes spin{
+			0%{-ms-transform:rotateY(0deg);transform:rotateY(0deg)}
+			100%{-ms-transform:rotateY(360deg);transform:rotateY(360deg)}
+		}
+		@-o-keyframes spin{
+			0%{-o-transform:rotateY(0deg);transform:rotateY(0deg)}
+			100%{-o-transform:rotateY(360deg);transform:rotateY(360deg)}
+		}
+		@keyframes spin{
+			0%{transform:rotateY(0deg)}
+			100%{transform:rotateY(360deg)}
+		}
+		.container:hover{
+			-moz-animation:spin 5s linear infinite;
+			-o-animation:spin 5s linear infinite;
+			-webkit-animation:spin 5s linear infinite;
+			animation:spin 5s linear infinite;
+		}
+		.stage{
+			width: 300px;
+			height:300px;
+			background: url(images/bg-grid.jpg) no-repeat;
+			margin:20px;
+			position: relative;
+			background-size: 100% 100%;
+			float:left;
+			perspective:1200px;
+
+		}
+		.container{
+			position: relative;
+			height: 230px;
+			width: 100px;
+			top:50%;
+			left:50%;
+			margin-top:-50px;
+			transform-style:preserve-3d;
+		}
+		.side{
+			width:100px;
+			height: 100px;
+			font-size: 30px;
+			line-height: 100px;
+			position: absolute;
+			margin-top: -50px;
+			margin-left: -50px;
+			text-align: center;
+			color:#fff;
+			text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+
+		}
+		.top{
+			background:#9acc53;
+			/* transform:rotate(-45deg) skew(15deg,15deg); */
+			transform:rotate(-45deg) skew(15deg,15deg);
+		}
+		.left{
+			background: #8ec61f;
+ 			transform:rotate(15deg) skew(15deg,15deg) translate(-50%,100%);
+
+/* 		 	transform:rotate(15deg) skew(15deg,15deg) translate(-50%,100%);		
+*/		 	}
+		.right{
+			background: #80b239;
+			transform:rotate(-15deg) skew(-15deg,-15deg) translate(50%,100%);
+		 		}
+		 
+	</style>
+</head>
+<body>
+	<div class="stage s1">
+		<div class="container">
+			<div class="side top">1</div>
+			<div class="side left">2</div>
+			<div class="side right">3</div>
+		</div>
+	</div>
+</body>
+</html>

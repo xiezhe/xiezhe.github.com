@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>2ddemo</title>
+	<style type="text/css">
+		.wrap{
+			width:500px;
+			height: 500px;
+			position: relative;
+			background: url(images/bg-grid.jpg) no-repeat;
+			background-size:100% 100%;
+		}	
+		.container img{
+			position:absolute;
+			top:50%;
+			left:50%;
+			width: 70px;
+			height: 100px;
+			margin-top: -50px;
+			margin-left:-35px; 
+		}
+		.container img:nth-child(1){
+			z-index: 2;
+			opacity: 1;
+		}
+		.container img:nth-child(1){
+			z-index: 1;
+			opacity:.5;
+			-webkit-transform:scale(1.5);
+		}
+		.skew{
+			float: left;
+			width:230px;
+			height: 230px;
+			background: #f00;
+			/* border-radius: 50%; */
+			transform:skew(10deg);
+		}
+		.skewX{
+			float: left;
+			width:230px;
+			height: 230px;
+			background: #f00;
+/* 			border-radius: 50%;
+			 */			transform:skewX(10deg);
+			 margin:0 10px;
+		}
+		.skewY{
+			float: left;
+			width: 230px;
+			height: 230px;
+			background: #f0f;
+			transform:skewY(10deg);
+			margin:0 10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="container"><img src="images/cardjfront.png" alt=""width="70"height="100"><img src="images/cardjfront.png" alt=""></div>
+	</div>
+	<div class="skew">
+		
+	</div>
+	<div class="skewX">
+		
+	</div>
+	<div class="skewY"></div>
+</body>
+</html>
