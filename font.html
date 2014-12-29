@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>@font-face</title>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+			list-style: none;
+		}
+		.wrap{
+			width:210px;
+			height: 210px;
+			margin: 100px auto;
+
+		}
+		.icon{float:left;width:68px;height: 68px;border:1px solid #ccc;background: #eee;}
+		@font-face{
+			font-family: "xiezhe";
+			src:url(fonts/icomoon.eot);/*ie9兼容模式下*/
+			/*加问号是为了兼容ie*/
+			/* src:url(fonts/icomoon.eot?iefix1dfxhs) format("embedded-opentype"), 
+				url(fonts/icomoon.woff) format("woff"),
+				url(fonts/icomoon.ttf) format("truetype"),
+				url(fonts/icomoon.svg) format("svg"); */
+				/* src:url('fonts/icomoon.eot?#iefix1dfxhs') format('embedded-opentype'),
+								url('fonts/icomoon.woff?1dfxhs') format('woff'),
+								url('fonts/icomoon.ttf?1dfxhs') format('truetype'),
+								url('fonts/icomoon.svg?1dfxhs#icomoon') format('svg');
+							 */			
+			/* font-weight: normal;
+			font-style:normal; */
+		}
+		@font-face{
+			font-family: "xiezhes";
+			src:url(fonts/icomoon.eot) format("embedded-opentype"),
+				url(fonts/icomoon.woff) format("woff")
+				url(fonts/icomoon.ttf) format("truetype")
+				url(fonts/icomoon.svg) format("svg");
+			font-style: normal;
+			font-weight: normal;
+			/*embedded-opentype
+			  embedded-opentype
+			  embedded-opentype
+			  embedded-opentype
+			  embedded-opentype
+			  embedded-opentype
+			  embedder-opentype
+
+
+
+
+
+			*/
+			src:url(fonts/icomoon.eot?#iefix1dfxhs) format("embedded-opentype"),
+
+				url(fonts/icommon.woff) format("woff"),
+				url(fonts/icomoon.ttf) format("truetype"),
+				url(fonts/icomoon.svg) format("truetype")
+		}
+		.icon{
+			font-family: "xiezhes";
+			font-size: 40px;
+			color:#f00;
+			font-style: normal;
+			text-align:center;
+			line-height: 68px;
+			vertical-align: middle;
+			-webkit-font-smoothing:antialiased;/*抗锯齿*/
+			-moz-osx-font-smoothing:grayscale;/*抗锯齿*/
+			transition:all 2s ease-in;
+		}
+		.icon:hover{
+			transform:rotate(360deg) scale(1.5);
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<ul>
+			<li class="icon">&#xe600</li>
+			<li class="icon">&#xe601</li>
+			<li class="icon">&#xe602</li>
+			<li class="icon">&#xe603</li>
+			<li class="icon">&#xe604</li>
+			<li class="icon">&#xe605</li>
+		</ul>
+	</div>
+	
+</body>
+</html>

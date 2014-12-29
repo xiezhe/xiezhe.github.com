@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>居中</title>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding: 0;
+		}
+		.wrap{
+			height:2500px;
+			background:#f00;
+			position: relative;
+			position: fixed;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			background: #000;
+			background: rgba(0, 0, 0, 0.85);
+			z-index: 3;
+		}
+		.center{
+			background: #0ff;
+			margin:auto;
+			width: 50%;
+			height: 50%;
+			position: absolute;
+			top:0;
+			left:0;
+			right:0;
+			bottom: 0;
+			overflow: hidden;
+		}
+		.center.left{
+			/*左偏*/
+			/* right:auto;
+			left:30px;
+			text-align: left; */
+			/*右偏*/
+			/* left:auto;
+			right:30px;
+			text-align: right; */
+			/*总是居中*/
+			position: absolute;
+			z-index: 999;
+			/* height: auto;
+					 */		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="center left">
+			<h3>居中</h3>
+			<p>试试看看行不行</p>
+		</div>
+	</div>
+</body>
+</html>

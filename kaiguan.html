@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>开关</title>
+	<style type="text/css">
+		.example{
+			width: 100px;
+			height: 100px;
+			background: blue;
+			transition:width 0s ease-out 999999s,height 0s ease-out 999999s;
+
+		}
+		.example:hover{
+			width: 300px;
+			height: 300px;
+
+			background: green;
+			transition:width 2s,height 2s;
+		}
+		.zhiliu{
+			background: blue;
+			width: 100px;
+			height: 200px;
+			-webkit-transition:width 2s ease,height 2s ease;
+			-webkit-transform:translateZ(0);
+
+		}
+		.zhiliu:hover{
+			width: 300px;
+			height:300px;
+		}
+		@keyframes test{
+			animation-name:test;/
+			animation-duration:2s;
+			animation-timing-function:steps(10,end);
+			animation-delay:1s;
+			animation-iteration-count:infinite;/*动画的循环次数*/
+			animation-direction:alternate;/*动画的播放方向*/
+			animation-play-state:;/*控制动画的播放状态*/
+			animation-fill-mode:;/*动画时间外属性*/
+		}
+	</style>
+</head>
+<body>
+	<div class="example"></div>
+	<div class="zhiliu"></div>
+</body>
+</html>

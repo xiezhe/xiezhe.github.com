@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{margin:0;padding:0;}
+		.wrap{
+			display: flex;
+			flex-direction:row;
+			flex-wrap:wrap;
+			flex-flow: row wrap;
+			text-align: center;
+		}
+		.wrap>*{
+			padding:20px;
+			flex:1 100%;
+		}
+		header{
+			background: #f00;
+		}
+		article{
+			background: #f0f;
+		}
+		.asidelef{
+			background:#0f0;
+		}
+		.asiderig{
+			background:#0ff;
+		}
+		footer{
+			background: #00f;
+		}
+		@media all and (min-width: 600px){
+			 .aside{
+				flex:1 auto;
+			} 
+			
+		}
+		@media all and (min-width: 800px) {
+			.main{flex:2 0px;}
+			.asidelef{order:1;}
+			.main{order:2;}
+			.asiderig{order:3;}
+			footer{order:4;}
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<header>header</header>
+		<article class="main">
+			<p>ffffffffffffffffffffffffffffff</p>
+		</article>
+		<aside class="aside asidelef">left</aside>
+		<aside class="aside asiderig">right</aside>
+		<footer>footer</footer>
+	</div>
+</body>
+</html>

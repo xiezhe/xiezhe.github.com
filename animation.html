@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.demo{
+			width:200px;
+			height: 200px;
+			background: #f00;
+			margin:30px;
+			border-radius: 50%;
+			-webkit-animation:test 3s linear infinite;
+		}
+		@-webkit-keyframes test{
+			0%{
+				-webkit-transform:translate(0px) rotate(10deg) ;
+				background: #00f;
+			}
+						100%{
+				-webkit-transform:translate(540px) rotate(360deg);
+				background: #0ff;
+				opacity: 0;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="demo"></div>
+</body>
+</html>

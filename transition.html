@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>transition</title>
+	<style type="text/css">
+		.one{
+			width: 200px;
+			height:200px;
+			border-radius: 10px;
+			background: #f00;
+			transition-property:background, height, width;	
+			transition-duration:1s,2s,3s;
+			transition-timing-function:linear,ease-in-out,ease-in;
+			transition-delay:1s,2s,3s;
+		}
+		.one:active{
+			background:#0f0;
+			width:800px;
+			height:20px;
+		}	
+	</style>
+</head>
+<body>
+	<div class="one"></div>
+</body>
+</html>
