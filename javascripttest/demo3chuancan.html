@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		function addTen(num){
+			num += 10;
+			return num;
+		}
+		var count= 20;
+		var result=addTen( count );
+		console.log(count);
+		console.log(result);
+		///////////////////////////
+		function bianliang(obj1){
+			obj1.name="aaaaaaa";
+		}
+		var obj1={};
+		bianliang(obj1);
+		console.log(obj1.name);
+		function setName(obj){
+			obj.name = "jack";
+			obj = new Object();
+			obj.name = "lose";
+		}
+		var person = new Object();
+		setName(person);
+		console.log(person.name);
+		/////////////////////////////
+		//对于引用数据类型来说并不适用；
+		////////////////////////////
+		var a = "jack";
+		var b = true;
+		var c = NaN;
+		var d = undefined;
+		var i = 22;
+		var u;
+		var n = null;
+		var o = new Object();
+		var p = function(){}
+		console.log(typeof(a));
+		console.log(typeof(b));
+		console.log(typeof(c));
+		console.log(typeof(d));
+		console.log(typeof(i));
+		console.log(typeof(u));
+		console.log(typeof(n));
+		console.log(typeof(o));
+		console.log(typeof(p));
+		//instanceof 判断属于什么 返回值为true或false；
+		//如果用来检测基本类型的值，则该操作符始终会返回false；因为基本类型不是对象；
+		var arry = [1,2,3,4,5,6];
+		console.log( arry instanceof Object );
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
