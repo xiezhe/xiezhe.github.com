@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		//创建对象
+		//var obj = {}
+		//var obj = new Object()
+		//给对象赋值的三种方法
+		var man = {name:"xiezhe",age:"23"};
+			man.weight="70kg";
+			man['sex']="man";
+			//对象中的属性名不能重复，如果之前有了，而不是重新创建，而是修改了属性值
+			man.name="hehe"
+			man['name'] = "www"
+			//获取
+			var name = man.name;
+			var age = man.age;
+			//删除，分为假性删除和真删除；
+			//假性删除：
+			//属性名 = null;只留出空位置（挖坑种树的例子，空和零与null的区别）
+			//真实删除：delecte;
+			//delete 对象.属性名;不提倡使用
+
+			/*console.log(man,name,age)*/
+			var bianliang = "hehe";
+			var bianliangduixiang = new Object();
+				bianliangduixiang["bianliang"] = "对象的属性值";
+				bianliangduixiang.hehe="bianliang"
+				console.log(bianliangduixiang["bianliang"])
+				console.log(bianliangduixiang[bianliang])//bianliangduixiang[bianliang]变量的值为对象的属性名
+				//属性名：数值或字符串，属性值可以是任何的数据类型
+				//属性名如果是数字的话就不能是对象.属性名了，而是要对象[属性名（即数值）]obj["0"]和obj[0]是等价的；属性名为数字的话，双引号可写可不写
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

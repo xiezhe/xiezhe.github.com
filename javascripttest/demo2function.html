@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		//function 函数名(形参){
+			//函数体
+		//}
+		//形参:没有原材料，需要外界的传输
+		//一个函数是由两部分组成制定函数和执行函数
+		//函数还没执行时，制定的函数没有任何意义
+		function sum( a , b , c){
+			var total = (a + b)*c;
+			console.log(total);
+		}
+		sum(20,30,3)//执行函数
+		//内置接受参数机制（天生就有的）不管是否定义形参或传递了值：arguments
+		//arguments属于类数组：以数字作为所以，从0开始，逐级递增有length的属性代表传递参数的个数，arguments.callee代表函数自己,arguments.caller代表函数本身执行
+		function sum1(){
+			console.log(arguments);
+			//获取第一个参数
+			//arguments[0]
+			//传递的个数
+			//arguments.length
+			var totala = (arguments[0] + arguments[1])*arguments[2]
+			console.log(totala)
+		}
+		sum1(20,30,3)
+		//function sum2(num1,num2,num3){
+			//定义了形参，但没有传值的，输出undefined
+			//console.log(num1);
+			//console.log(num2);
+			//console.log(num3);
+		//}
+		//sum2(2,3)
+		function sum3( num1, num2 ){
+			//判断参数是否传递，if(typeof(参数)!="undefined")
+			var total3= null;
+			if( isNaN(num1)==false){
+				total3 += num1;
+			}
+			if( isNaN(num2)==false){
+				total3 += num2;
+			}
+			console.log(total3)
+		}
+		sum3(1,2);
+		//不是具体的个数想加
+		function sum4(){
+			var total4= null;
+			for(i=0;i<arguments.length;i++){
+				total4+=arguments[i];
+			}
+			console.log(total4)
+		}
+		sum4(1,2,3,4,5,6,7,8,9,10,12)
+		//函数在执行的时候会形成一个私有的作用域来保护里面的变量不受干扰，这种机制叫做闭包
+		//作用域：代码执行的上下文（范围）
+		//公有作用域：window；私有作用域：；
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
