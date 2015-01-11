@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>string</title>
+    <script type="text/javascript">
+        //字符串
+        //字符串中索引从0开始，也有length属性；
+        //方法一：charAt(索引) 获取执行索引位置的字符
+        //指定索引处没有字符返回的是空；
+        var str = "xifsfnefnjgeefjj";
+        console.log(str.charAt(1));
+        console.log(str.charAt(-2))
+        //方法二：slice
+        //slice(n,m)从索引n开始取到索引m（不含m）处，将取到的数据形成新的字符串返回；
+        //如果n和m是负值，默认按照str.length+n/+m来处理；
+        //如果只写n就从n到末尾；
+        console.log(str.slice(2,3))
+        //方法三：substring/substr
+        //substring(n,m)从索引n开始找到索引m（不包含m）处；
+        //substr(n,m)从索引n开始，找到m个字符；
+        //substring(n)/substr(n)默认找到最末尾
+        //不支持负值
+        console.log(str.substring(1,4));
+        console.log(str.substr(1,4))
+        console.log(str.slice(1));
+
+        //方法四：indexOf/lastindexOf
+        //找到字符串中指定字符的索引位置，indexOf()第一次出现的位置，lastIndexOf()最后一次出现的位置，如果没有的话返回-1；
+        //除了判断一个字符也可以写字符组；
+        //indexOf/lastindexOf("字符",n)指定从索引n开始查找
+        console.log(str.indexOf("f"));
+        console.log(str.lastIndexOf("f"));
+        //if(str.indexOf("f")>-1){
+            //判断字符串中是否包含某个字符
+            
+        //}
+        //if(str.indexOf("xifsfn")>-1){
+
+        //}
+        //方法五:toLowerCase/toUpperCase;
+        //大小写转换；
+        var str1="fdffeiFAJEIJLAF";
+        console.log(str1.toLowerCase());
+        console.log(str1.toUpperCase());
+        //split("分隔符")按照指定的字符，将字符串拆分成数组；
+        //split("分隔符",n)限定数组的长度;
+        //可以放正则表达式；
+        var ary=[1,2,3,4,5,6];
+        console.log(ary.join("-"));
+        var str="1-21-55-20"
+        console.log(str.split("-"));
+        var str="1-2&3$4@5-6";
+        console.log(str.split(/[-,$,&,@]/))
+        //replace(n,m)将n替换成m;
+        //字符串替换
+        //普通写法，每一个只能替换一次
+        //正则写法，
+        var str="hello world!"
+        console.log(str.replace("world","city"));
+        console.log(str.replace(/[l]/g,"L"));
+        //charAtCode******************
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

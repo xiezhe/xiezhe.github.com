@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Math</title>
+    <script type="text/javascript">
+        //Math 数学函数
+        //Math.ceil()向上取整
+        //Math.floor()向下取整
+        //Math.round()四舍五入
+        //Math.abs()取绝对值
+        //Math.random()随机数 范围：[0.1)
+        //获取N-M之间的随机整数；
+        //Math.round(Math.random()*(m-n)+n);
+        /*for(i=0;i<100;i++){
+            console.log(Math.round(Math.random()*(92-34)+34))
+        }*/
+        //写一个方法，传递两个数字，我们获取数字键的一个随机整数
+        /*
+            getRandom:获取m，n之间的随机整数 by xiezhe 2015.1.8
+            @parms{
+                n:获取范围的开始值 number下
+                m：获取法内的结束值 number
+            }
+            @return{
+                最否取得的随机数
+            }
+         */
+        function getRandom(n,m){
+            //默认是获取[0,1)之间的
+            var target = Math.random();
+            //如果传递的是有效的数字，我们才计算
+            if(!isNaN(n) && !isNaN(m)){
+                n=Number(n);
+                m=Number(m);
+                //如果n>m的话，我们把连个值调换；
+                var c = null;
+                if(n>m){
+                    c=n;
+                    n=m;
+                    m=c;
+                }
+                target = Math.round(Math.random()*(m-n)+n);
+            }
+            return target;
+        }
+        var fanwei1=getRandom(100,50);
+        console.log(fanwei1);
+        //冒泡排序
+        function sortArry(oldarry){
+            var newarry= oldarry.concat();
+            for(var i = 0; i<newarry.length-1; i++){
+                for(var j=0;j<newarry.length-1-i;j++){
+                    var emp=null;
+                    if(newarry[j]>newarry[j+1]){
+                        emp=newarry[j];
+                        newarry[j]=newarry[j+1];
+                        newarry[j+1]=emp;
+                    }
+                }
+            }
+            return newarry;
+        }
+        var arry=[1,5,39,32,24,85,25,24,38,26];
+        var paixu=sortArry(arry);
+        paixu.reverse();
+        console.log(paixu);
+        console.log(arry);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

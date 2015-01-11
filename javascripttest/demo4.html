@@ -27,7 +27,21 @@
 			}
 			console.log(i);
 		}
-		console.log(i);
+		console.log(i);//8
+		var arry = [20,35,12,15,56,58,42,36];
+		function sortArray(arr){
+			//var arr = arrx;
+			for(i=0;i<arr.length-1;i++){
+				for(j=0;j<arr.length-1-i;j++){
+					var tem = null;
+					tem=arr[j];
+					arr[j]=arr[j+1];
+					arr[j+1]=tem;
+				}
+			}
+		}
+		var paixu = sortArray();
+		console.log(paixu(arry));
 	</script>
 </head>
 <body>

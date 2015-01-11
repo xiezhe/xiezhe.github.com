@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>三个判断的应用if、else if、else</title>
+    <style type="text/css">
+        #divw{
+            width:100px;
+            height:100px;
+            background: #ff0000;
+        }
+    </style>
+    <script type="text/javascript">
+        /*var a = 8;
+        if( a>5){
+            alert("大于5")
+        }else if(a>5 && a<10){
+            alert("大于5小于10")
+        }else if(a>=10){
+            alert(a)
+        }else{
+            alert("小于5")
+        }*/
+        //只要一个条件成立就执行大括号里的内容，执行完成后立即结束整个判断，不管后面的条件是否成立，
+        //else是以上条件都不满足时执行；
+       
+        //}
+    </script>
+    <script type="text/javascript">
+        var oDiv =document.getElementById("divw")
+        function change(){
+            alert(oDiv.innerHTML)
+        }
+    </script>
+</head>
+<body>
+    <div id="divw" style="background:red" onclick="change()"></div>
+    <p class="f">ffff</p>
+
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>字符串拼接</title>
+    <script type="text/javascript">
+        //字符串拼接；
+        //boolean --> number --> object -->string
+        //true 1 false 0
+        var str = 100 +true +null+undefined+"呵呵"+[]+null+1 +false;
+        console.log(str);
+        //数字
+        //////////////////////////////
+        //////////////////////////////
+        //数字+null null当做0 处理；
+        console.log(1+null);
+        //数字+undefined NaN;
+        console.log(1+undefined);
+
+
+        //数字+{} 都转化成string；"123[object Object]"
+        console.log(123+{});
+
+
+        //数字+[] 都转化成string；
+        console.log(1+[1,2,3])
+        //1+[1,2,3] 先将[1,2,3]转化成string 1,2,3
+        //数字+字符串 都转换成字符串；
+
+
+        //字符串：
+        ///////////////////////////
+        ///////////////////////////
+        //字符串+[] 字符串
+        console.log("1234"+[]);//"1234"
+
+
+        //字符串+{} 字符串[object Object]
+        console.log("1234"+{});
+
+
+        //字符串+null 字符串null
+        console.log("1234"+null);
+        //字符串+undefined 字符串undefined
+        
+        //{}+[] 0
+        //{}+null 0
+        //{}+undefinde NaN
+        //[]+null "null"
+        
+
+
+
+        //对象与对象进行对比，结果不相等，因为比较的不是同一个内存地址；
+        //[] == [] //false;
+        console.log([]==[]);
+        //({}=={})//false;
+        console.log(({}=={}));
+
+
+        //({} = "a")//false;
+        console.log(({}=="a"));
+
+
+        //({}=="[object Object]") true;
+        console.log(({}=="[object Object"));
+
+
+        //[] =="" true;
+        console.log([]=="");
+
+
+        //对象和布尔进行比较都是先转换成number进行比较；
+        //([]==true) false;
+        console.log([]==true);
+
+
+        //Number("") 0
+        console.log(Number(""));
+
+
+        //({}==true) false
+        console.log(({}==true));
+
+        //对象转换成字符串再转换成数值
+        //Number("[object Object]") NaN
+        console.log(Number("[object Object]"));
+
+
+        //Number(null); 0
+        console.log(Number(null));
+        //[]==0; true;
+
+        //布尔和字符串比较
+        //true =="1" true
+        
+        //null ==undefined; true
+        //null===undefined; false
+        //null == 0; false
+        //null ==""; false
+        //undefined == 0; false
+        //null、undefined和任何数据类型比较时都是false；
+        
+        
+        //在条件判断中if(条件)
+        //Object都是true
+        //function 都是true
+        //字符串 只有空字符串是false；
+        //number下 只有0和NaN返回false；
+        //if([]){
+
+        //}
+        var oDiv = documen.getElementById("div1");
+        if(oDiv){
+            //判断oDiv 是否存在 即oDiv!=null;
+            //0 NaN "" null undefined 是false
+        }
+
+        //总结：
+        //两个数据类型比较
+        //对象和对象比较不相等；
+        //对象和字符串{}转化成"[object Object]"不管里有没有内容
+        //数组和字符串 []转化成""(空字符串)，如果有值相当于数组toString;
+        //对象和数字比较；首先把对象转换成字符串，然后Number强制转换成数字{}转换成数字是NaN；
+        //对象和布尔进行比较都变成数字在进行比较
+        //
+        //数字和布尔 把布尔转化成数字 true：1；false：0；
+        //数字和字符串 把字符串转换成数字Number(字符串)；
+        
+        //布尔和字符串 都转换成数字；
+        //null、undefined和任何数据类型比较时都是false；
+    </script>
+</head>
+<body>
+    <div id="div1"></div>
+    <script type="text/javascript">
+        var ary = [1,2,3,4,5];
+        var oDiv = document.getElementById("div1");
+        var str="";
+        str+="<div class='c1'>";
+            str+="<ul>"
+                for(i=0;i<ary.length;i++){
+                    str+="<li>"+ary[i]+"</li>";
+                }
+            str+="</ul>"
+        str+="</div>";
+        console.log(str);
+        oDiv.innerHTML = str;
+    </script>
+</body>
+</html>
