@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DOM</title>
+	<script type="text/javascript">
+		window.onload = function(){
+			var header = document.getElementById('header');
+			var arrayNode = Array.prototype.slice.call(header.childNodes,0)	
+			console.log(arrayNode);
+			var nav = document.getElementById('nav');
+			console.log(nav.firstChild);//null
+			console.log(nav.lastChild);//null
+			var p = document.getElementsByTagName('p')[0];
+			console.log(p.previousSibling);
+			console.log(p.nextSibling);
+			//console.log(hasChildNodes(p));
+			var newNode = document.createElement('div');
+			var h3 = document.getElementsByTagName('h3');
+			newNode.id = "createNode";
+			newNode.style.width = "100px";
+			newNode.style.height = "100px";
+			newNode.style.backgroundColor = "#f00";
+			nav.appendChild(newNode);
+			nav.appendChild(h3.item(0));//对于已经有的则将其移到所在位置
+		}
+	</script>
+</head>
+<body>
+	<div id="header">
+		<h3>
+			我是h3标签
+		</h3>
+			<p>我是p标签</p>
+		<ul>
+			<li>li1</li>
+			<li>li2</li>
+			<li>li3</li>
+			<li>li4</li>
+			<li>li5</li>
+		</ul>
+	</div>
+	<div id="nav"></div>
+</body>
+</html>

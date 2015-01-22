@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>基本选择器</title>
+	<script src="http://libs.baidu.com/jquery/1.9.1/jquery.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$("#div").css({
+			width:"100px",
+			height:"100px",
+			background:"#f00"
+		})
+		$("h1").attr("title","基本选择器");
+		$(".pt").css("font-size","16px")
+		$("h1,p").css("color","#f0f");//集群选择器
+		$("#div > h1").css("text-shadow","0 0 10px yellow")//子选择器
+		$("#div ul li").css("color","#f0f");//后代选择器
+		$("*").css("font-weight","bold");//通配符选择器
+		console.log($("*")[0].nodeName);
+		//在全局范围使用通配符极大地消耗资源
+		//通配选择器一般应用于局部环境内
+		$(".pt.pb").css("color","#ff0")
+		$("body .nav ul li a")//选择器越复杂，那么字符串解析就越复杂
+	})
+	</script>
+</head>
+<body>
+	<div id="div">
+		<h1>基本选择器</h1>
+		<p class="pt pb">是的</p>
+		<p class="pt">nono</p>
+		<ul>
+			<li>li1</li>
+			<li>li2</li>
+			<li>li3</li>
+		</ul>
+	</div>
+</body>
+</html>
