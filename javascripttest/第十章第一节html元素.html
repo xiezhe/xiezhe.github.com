@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>html元素</title>
+	
+</head>
+<body>
+	<div id="div1" title="div1xian" xiezhe="very good" lang="en" dir="ltr" class="div1classname" style="width:200px;height:200px;background:#f00;" onclick="texing()">abcd</div>
+	<div id="myDiv" align="left" my_special_attribute="hello!"></div> 
+	<table>
+		<tr>
+			<td>哈哈哈</td>
+		</tr>
+	</table>
+	<script type="text/javascript">
+			var div1 = document.getElementById('div1');
+			console.log(div1.id);
+			console.log(div1.title);
+			console.log(div1.lang);
+			console.log(div1.dir);
+			console.log(div1.className);
+
+			/***********************************************************/
+			//对特性重写
+			div1.dir = "rtl";//右对齐;
+			var table = document.getElementsByTagName('table')[0];
+			//alert(HTMLTableRowElement)
+			
+			/***********************************************************/
+			//取得元素属性getAttribute()的特性名与实际的特性名相同。因此要想得到class特性值，应传入"class"而不是"className",也可以找到自定义的属性特性的名称是不区分大小写的，即"ID"和"id"代表的都是同一个特性。另外也要注意，根据HTML5规范，自定义特性应该加上data-前缀以便验证
+			//值得注意的地方：
+			//1、特性名要意义对应，class就是class，而不是className；
+			//2、特性名不区分大小写，你大写小写都可以，按常规写
+			//3、在html5里要按照规范自定义的特性加上data-为前缀
+			console.log(div1.getAttribute("id"));
+			console.log(div1.getAttribute("title"));
+			console.log(div1.getAttribute("class"));
+			console.log(div1.getAttribute("xiezhe"));
+			
+			console.log(div1.align)
+			var div = document.getElementById("myDiv");
+			//alert(div.id);  //"myDiv" 
+			//alert(div1.my_special_attribute);  //undefined（IE6~8除外）
+			console.log(div1.xiezhe);//但在这种情况下无论IE和其他浏览器都是undefined
+			//alert(div.align);   //"left" 
+			//特例：
+			//1、style，返回的是一个对象，要是用getAttribute()的话返回的是css文本
+			//2、事件
+			console.log(div1.style);
+			console.log(div1.getAttribute("style"));
+			
+		var divwai = document.getElementById("div1");
+		function texing(){
+				console.log("click事件")
+			}
+		console.log(divwai.onclick);//返回js函数
+		console.log(divwai.getAttribute("onclick"))//返回相应的字符串
+		//由于存在这些差别，在通过JavaScript以编程方式操作DOM时，开发人员经常不使用getAttribute()，而是只使用对象的属性。只有在取得自定义特性值的情况下，才会使用getAttribute()方法。
+
+		/***********************************************************/
+		//修改元素特性setAttribute("特性名","特性值");
+		//通过这个方法设置的特性名会被统一转换为小写形式
+		div1.setAttribute("id","xiezhe")//如果有特性值，则可以重置特性值
+		div1.setAttribute("xiejiji","well")//如果没有的话则创建特性值并且赋值；
+		console.log(div1.getAttribute("xiejiji"));
+		div.mycolor = "red"; 
+		alert(div.getAttribute("mycolor")); //null（IE6~8除外）
+		//在IE7及以前版本中，setAttribute()存在一些异常行为。通过这个方法设置class和style特性，没有任何效果，而使用这个方法设置事件处理程序特性时也一样。尽管到了IE8才解决这些问题，但我们还是推荐通过属性来设置特性。
+
+		/***********************************************************/
+		//removeAttribute(要移除的特性);
+		div1.removeAttribute("style");//移除特性IE6及以前版本并不支持
+	</script>
+</body>
+</html>
