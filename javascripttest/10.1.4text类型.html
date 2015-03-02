@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+        .border{
+            width: 100%;
+            height: 100%;
+            background-color: #f00;
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload  = function(){
+            var div = document.createElement("div");
+            div.className = 'border';
+            //创建文本节点
+            var text = document.createTextNode("hello world");
+            /*document.body.appendChild(text);
+            document.body.firstChild.nodeValue = "aaaaaaaaaaa";
+            var textNode = document.createTextNode("<strong>eee</stong>")
+            document.body.appendChild(textNode);*/
+            div.appendChild(text);
+            document.body.appendChild(div);
+            /*var other = document.createTextNode("too");
+            div.appendChild(other);*/
+            console.log(div.childNodes.length);
+            //将文本节点合并
+            /*div.normalize()
+            console.log(div.childNodes.length);
+            console.log(div.firstChild.nodeValue);*/
+            //splitText()将一个文本节点拆分两个文本节点（注意：是两个）
+
+            var element = document.createElement("div");
+            element.className = "message";
+            var textNode = document.createTextNode("Hello world!");
+            element.appendChild(textNode);
+            document.body.appendChild(element);
+            var newNode = element.firstChild.splitText(5);
+            alert(element.firstChild.nodeValue); //"Hello"
+            alert(newNode.nodeValue); //" world!"
+            alert(element.childNodes.length); //2
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

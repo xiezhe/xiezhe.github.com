@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>创建元素createElement</title>
+	<style type="text/css">
+		.div1{width: 100px; height: 100px;background: #0f0;}
+	</style>
+	<script type="text/javascript">
+		window.onload = function() {
+			var div1 = document.getElementsByClassName('div1')[0];
+			var div = document.createElement("div");
+			div.id = "createElement";
+			div.title = "创建的标签";
+			div.style.width = "100px";
+			div.style.height = "100px";
+			div.style.backgroundColor = "#f00";
+			div2 = document.createElement('div');
+			div2.id = "createElement2";
+			div2.title = "创建的第二个标签";
+			div2.style.width = "100px";
+			div2.style.height = "100px";
+			div2.style.backgroundColor = "#00f";
+			div2.createText = ""
+			document.body.appendChild(div2);
+			//document.documentElement.appendChild(div)
+			document.body.appendChild(div);
+			div1.parentNode.insertBefore(div2,div1);
+			div1.parentNode.replaceChild(div,div2);
+			var div4 = div2.cloneNode(true);
+			document.body.appendChild(div4);
+		}
+	</script>
+</head>
+<body>
+	<div class="div1"></div>
+</body>
+</html>

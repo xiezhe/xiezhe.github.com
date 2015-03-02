@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>词法分析</title>
+	<script type="text/javascript">
+		function t1(age){
+			alert(age);
+		}
+		t1(5);
+		t1()
+		/*
+			词法分析分为三步：
+			1、先分析参数；
+			2、在分析变量声明；
+			3、后分析函数声明；
+			一个函数使用的局部变量就从上面分析而来
+			步骤：
+			0：函数运行的一瞬间，生成Active Object对象（后面成为ao）
+			1：把声明参数形成ao的属性，参数的值即为属性的值
+			2：分析变量声明即 var age
+				如果ao上没有age属性，则定义ao属性，值为：undefined
+				如果ao上有age属性，则不作任何影响
+			3：函数分析：分析函数声明 function t1(){}
+				则把函数赋值给ao.t1属性
+				如果t1属性之前存在，则被覆盖
+		*/
+		/*
+			词法分析过程：
+			ao{age:undefined};
+			t(5)--->ao.age=5;alert(ao.age)//5
+			t()--->ao.age=undefined;alert(ao.age)//undefined
+		*/
+		function t2(age) {
+			var age = 99;
+			alert(age);//99
+		}
+		t2(5);
+		/*
+			分析过程：
+			形成AO
+			0：形成AO{}
+			1：分析AO{age：undefined}
+			2：分析var age 发现AO里有age属性，不做任何影响
+			3：执行过程
+				AO.age = 99;
+				alert(AO.age)
+		*/
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>创建动态脚本</title>
+    
+</head>
+<body>
+    <input type="button" value="Add Script" onclick="addScript()">
+    <script type="text/javascript">
+
+            //创建动态脚本也有两种方式：插入外部文件和直接插入 JavaScript 代码。
+            //var script = document.createElement('script');
+            //script.setAttribute("type","text/javascript");
+            //script.setAttribute("src","js/alert.js");
+            //var head = document.documentElement.getElementsByTagName('head')[0];
+            //head.appendChild(script);
+            //可以使用函数封装
+            /*function loadScript(URL) {
+                var script = document.createElement('script');
+                var head = document.getElementsByTagName('head')[0];
+                script.type = "text/javascript";
+                script.src = "js/" + URL;
+
+                head.appendChild(script);
+            };
+            loadScript("alert.js");*/
+            var script = document.createElement('script');
+            var head = document.getElementsByTagName('head')[0];
+            script.type = "text/javascript";
+
+            //script.appendChild(document.createTextNode("function fef(){alert('hi');}"));
+            //此处原来谢了一个匿名函数不能运行，为什么
+            //ie6~8不支持!!!IE 将<script>视为一个特殊的元素不允许DOM访问其子节点。解决办法：
+            //script.text = "function fef(){alert('hi')}";
+            /*try {
+                script.appendChild(document.createTextNode("function fef(){alert('hi');}"));
+            }catch(ex) {
+                script.text = "function fef(){alert('h1')}; fef()";
+            }
+            head.appendChild(script);*/
+            function loadScript(code) {
+                var script = document.createElement("script");
+                /*var head = document.getElementsByTagName('head')[0];*/
+                script.type = "text/javascript";
+                try {
+                    script.appendChild(document.createTextNode(code));
+                } catch (ex){
+                    script.text = code;
+                }
+                document.body.appendChild(script);
+            }
+            function addScript(){
+                loadScript("function sayHi(){alert('hi');}");
+                sayHi();
+            }
+            /*var btn = document.getElementById('btn');
+            btn.onclick = function (){
+                addScript()
+            }*/
+    </script>
+</body>
+</html>
