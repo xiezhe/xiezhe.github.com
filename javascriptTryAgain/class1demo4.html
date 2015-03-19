@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo4</title>
+	<style type="text/css">
+		#div1{border:1px solid #f00;width:500px;height:300px;margin:20px;}
+		#div1 p{border:1px solid #f0f;margin:20px 10px;padding:10px;}
+	</style>
+	<script type="text/javascript">
+		window.onload = function (){
+			var oDiv = document.getElementById('div1');
+			var oText = document.getElementById('text');
+			var oBtn = document.getElementById('btn');
+			oBtn.onclick = function(){
+				/*var oP = document.createElement('p');
+				var oTextp = document.createTextNode(oText.value);
+				oP.appendChild(oTextp);
+				oDiv.appendChild(oP);*/
+				oDiv.innerHTML += '<p>'+oText.value+'</p>';
+				oText.value = '';
+			}
+		}
+	</script>
+</head>
+<body>
+	<div id="div1"></div>
+	<span>我说</span>
+	<input id="text" type="text" name="" value="" placeholder="">
+	<input id="btn" type="button" name="" value="发送">
+</body>
+</html>

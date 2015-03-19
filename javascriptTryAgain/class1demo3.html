@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo1</title>
+	<script type="text/javascript">
+		window.onload = function (){
+			var oBtn = document.getElementById('btn');
+			var oText = document.getElementById('text');
+			var oImg = document.getElementById('img1');
+			var oP = document.getElementById('p1')
+			oBtn.onclick = function (){
+				oP.innerHTML = oText.value;
+			};
+		}
+	</script>
+</head>
+<body>
+	<input type="text" value="" id="text">
+	<input type="button" name="" value="按钮" id="btn">
+	<img id="img1" src="" alt="">
+	<p id="p1">hehe</p>
+</body>
+</html>

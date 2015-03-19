@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo7</title>
+</head>
+<body>
+	<img src="images/img1" alt="" id="img">
+	<script type="text/javascript">
+		var oImg = document.getElementById('img');
+		//所有的相对路径都不能拿来做判断
+		//颜色值也不要拿来做判断
+		//innerHTML的值也别拿来做判断
+		/*
+			oDiv.style.float = 'left';
+			在浏览器为IE的情况下
+			oDiv.style.styleFloat ='left';
+			非IE的情况下
+			oDiv.style.cssFloat = 'left';
+			解决办法直接修改它的className就可以了，很方便
+			.left{float:left;}
+			.right{float:right}
+			<div class='left'></div>
+			技术上：必须能做到掌握兼容性（兼容性解决方案）
+			需求上：商量着来（提供最准确的呈现）
+		*/
+	</script>
+	<input type="button" name="" value="" id="btn">
+	<script type="text/javascript">
+		var oBtn = document.getElementById('btn');
+		oBtn.onclick = function(){
+			//IE6.IE7,IE8得供着，不支持啊
+			oBtn.type = 'checkbox';
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo8</title>
+	<style type="text/css">
+		div{width:100px;height: 100px;border:1px solid #ff0;}
+	</style>
+</head>
+<body>
+	<label>请输入属性名称：<input id="attr" type="text" name="" value=""></label>
+	<label>请输入属性的值<input id="val" type="text" name="" value=""></label>
+	<input type="button" name="" value="确定" id="btn">
+	<div id="div1"></div>
+	<script type="text/javascript">
+		var oAttr = document.getElementById('attr');
+		var oVal = document.getElementById('val');
+		var oBtn = document.getElementById('btn');
+		var oDiv = document.getElementById('div1');
+		oBtn.onclick =function(){
+			oDiv.style[oAttr.value] = oVal.value;
+			//js中允许'.'换成'[]';
+		}
+	</script>
+</body>
+</html>

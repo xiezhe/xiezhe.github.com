@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo5</title>
+	<script type="text/javascript">
+		window.onload = function (){
+			var oBtn1 = document.getElementById('btn1');
+			var oBtn2 = document.getElementById('btn2');
+			var p1 = document.getElementById('p1');
+			var num = 16;
+			oBtn1.onclick = function(){
+				num--;
+				p1.style.fontSize = num+'px';
+				if(p1.style.fontSize == 5){
+					oBtn1.disabled = true;
+				}
+			}
+			oBtn2.onclick = function(){
+							num++;
+							p1.style.fontSize = num+'px';
+							if(p1.style.fontSize == 25){
+								
+							}
+						}
+		}
+	</script>
+</head>
+<body>
+	<input type="button" name="" value="-" id="btn1">
+	<input type="button" name="" value="+" id="btn2">
+	<p id="p1">nifjjeifjiefnifjjeifjiefnifjjeifjiefnifjjeifjiefnifjjeifjiefnifjjeifjiefnifjjeifjiefnifjjeifjiefnifjjeifjiefnifjjeifjiefnifjjeifjiefnifjjeifjiefnifjjeifjiefnifjjeifjiefnifjjeifjiefnifjjeifjiefnifjjeifjiefnifjjeifjiefnifjjeifjiefnifjjeifjiefnifjjeifjiefnifjjeifjiefnifjjeifjiefnifjjeifjiefnifjjeifjiefnifjjeifjiefnifjjeifjief</p>
+</body>
+</html>
